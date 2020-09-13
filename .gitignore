@@ -1,2 +1,4 @@
 # PyCharm personal stuff
 .idea
+.pytest_cache/
+__pycache__/
