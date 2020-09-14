@@ -31,7 +31,7 @@ Look how easy it is to use:
          Extran extra
 
 This is live for elli!
-
+This is a live fix.
 
 .. figure:: screenshot-control-panel.jpg
    :width: 50%
