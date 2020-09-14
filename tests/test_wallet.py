@@ -1,5 +1,5 @@
 import pytest
-from Models.Wallet import Wallet, InsufficientAmount
+from models.Wallet import Wallet, InsufficientAmount
 
 def test_default_initial_amount():
     wallet = Wallet()
