@@ -3,6 +3,9 @@
 [![Build Status](https://www.travis-ci.org/hagaika/Configs-dev.svg?branch=master)](https://www.travis-ci.org/hagaika/Configs-dev)
 ![alt open-issues-badge](https://img.shields.io/github/issues-raw/hagaika/Configs-dev)
 [![Documentation Status](https://readthedocs.org/projects/configs-dev/badge/?version=latest)](https://configs-dev.readthedocs.io/en/latest/?badge=latest)
+[![Updates](https://pyup.io/repos/github/hagaika/Configs-dev/shield.svg)](https://pyup.io/repos/github/hagaika/Configs-dev/)
+[![Python 3](https://pyup.io/repos/github/hagaika/Configs-dev/python-3-shield.svg)](https://pyup.io/repos/github/hagaika/Configs-dev/)
+
 
 
 
