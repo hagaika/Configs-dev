@@ -9,3 +9,7 @@ install:
 # command to run tests
 script:
   - pytest
+  
+# add notifications to slack
+notifications:
+  slack: appcard:X0eePYKUsQauXm1MksKI5WXU
