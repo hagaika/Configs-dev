@@ -7,3 +7,6 @@
 
 # Configs-dev
 Configuration setup for open source
+
+# Documentation
+Click view the [full documentation](https://configs-dev.readthedocs.io/en/latest/)
