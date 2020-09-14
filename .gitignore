@@ -2,4 +2,9 @@
 .idea
 .pytest_cache/
 __pycache__/
+
+# pytest-cov output
 .coverage
+
+# Documentation
+docs/_build/
