@@ -10,6 +10,6 @@ install:
 script:
   - pytest
   
-# add notifications to slack
+# add notifications to slack: #pre-open-source channel
 notifications:
   slack: appcard:X0eePYKUsQauXm1MksKI5WXU
