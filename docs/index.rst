@@ -3,18 +3,39 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Configs-dev's documentation!
+Welcome to |project|'s documentation!
 =======================================
+Release v\ |version|. (:ref:`Installation <install>`)
+
+.. image:: https://camo.githubusercontent.com/e80a3498385d84ff3eaa28fdea0a93e88b7702fa/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f68616761696b612f436f6e666967732d646576
+   :target: https://github.com/hagaika/Configs-dev/blob/master/LICENSE
+   :alt: License
+
+.. image:: https://camo.githubusercontent.com/33693bfef12aa01e115b2afc511afa8cfb053f1d/68747470733a2f2f707975702e696f2f7265706f732f6769746875622f68616761696b612f436f6e666967732d6465762f736869656c642e737667
+    :target: https://pyup.io/repos/github/hagaika/Configs-dev/
+
+|strong_project| is an elegant and simple configuration management library for Python.
+
+----------------------------------------------------------------
+
+|strong_project| allows you to set a hierarchy of configuration for your business with ease.
+There's no need to manually set database and fill it with hierarchies
+for later querying and retrieving.
+
+Let the package do it all for you, allowing you to simply talk to object and focus on your
+business logic!
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-$project
-========
+The User Guide
+=====================================================================
 
-$project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+This part of the documentation, which is mostly prose,
+begins with some background information about |project|,
+then focuses on step-by-step instructions for getting the most out of |project|.
 
 Look how easy it is to use:
 
@@ -27,8 +48,6 @@ Look how easy it is to use:
 
    Proceed with caution!
    A lot of caution!
-      Extra Caution!!
-         Extran extra
 
 This is live for elli!
 
