@@ -9,10 +9,10 @@
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+# inserting project directory into sys.path
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
 
 
 # -- Project information -----------------------------------------------------
@@ -20,6 +20,7 @@
 project = 'Configs-dev'
 copyright = '2020, Hagai Kalinhoff'
 author = 'Hagai Kalinhoff'
+version = '0.0.3'
 
 # -- General configuration ---------------------------------------------------
 
@@ -30,7 +31,7 @@ extensions = [
     'sphinx.ext.autodoc',  # auto documenting from function docstring
     'sphinx.ext.coverage',
     'sphinx.ext.doctest',
-    'sphinx.ext.todo'
+    'sphinx.ext.todo',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -52,3 +53,10 @@ html_theme = 'alabaster'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# Adding docs variables
+rst_prolog = f"""
+    .. |version| replace:: {version}
+    .. |project| replace:: {project}
+    .. |strong_project| replace:: **{project}**
+"""
