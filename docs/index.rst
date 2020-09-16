@@ -5,7 +5,7 @@
 
 Welcome to |project|'s documentation!
 =======================================
-Release v\ |version|. (:ref:`Installation <install>`)
+Release v\ |version|  (:ref:`Installation <install>`)
 
 .. image:: https://camo.githubusercontent.com/e80a3498385d84ff3eaa28fdea0a93e88b7702fa/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f68616761696b612f436f6e666967732d646576
    :target: https://github.com/hagaika/Configs-dev/blob/master/LICENSE
@@ -26,10 +26,6 @@ Let the package do it all for you, allowing you to simply talk to object and foc
 business logic!
 
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
 The User Guide
 =====================================================================
 
@@ -37,30 +33,15 @@ This part of the documentation, which is mostly prose,
 begins with some background information about |project|,
 then focuses on step-by-step instructions for getting the most out of |project|.
 
-Look how easy it is to use:
 
-    import project
-    # Get your stuff done
-    project.do_stuff()
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
-.. warning:: Here be dragons! This topic covers a number of options that
-   might alter your database.
+   user/install
+   user/quickstart
+   api
 
-   Proceed with caution!
-   A lot of caution!
-
-This is live for elli!
-
-This is a live fix.
-
-whoooohoooo
-
-
-.. figure:: screenshot-control-panel.jpg
-   :width: 50%
-   :alt: lala
-
-   An overview of the admin control panel.
 
 Features
 --------
@@ -99,3 +80,43 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
+.. warning:: Here be dragons! This topic covers a number of options that
+   might alter your database.
+
+   Proceed with caution!
+   A lot of caution!
+
+This is live for elli!
+
+This is a live fix.
+
+whoooohoooo
+
+.. note::
+
+   this is some note
+
+.. deprecated:: 0.0.2
+
+   this is some deprecated
+
+
+.. seealso::
+
+   this is see also
+
+
+.. code-block:: python
+   :linenos:
+
+    import pandas as pd
+    df = pd.DataFrame()
+
+
+.. figure:: screenshot-control-panel.jpg
+   :width: 50%
+   :alt: lala
+
+   An overview of the admin control panel.
