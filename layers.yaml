@@ -3,6 +3,8 @@
 #
 #
 
+app: my app
+
 layers:
   - name: first_a_layer
     children:
