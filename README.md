@@ -10,10 +10,57 @@
 
 
 # Configs-dev
-Configuration setup for open source
+This project is all about configuration setup!
 
-# Documentation
-Click view the [full documentation](https://configs-dev.readthedocs.io/en/latest/)
+**Configs-dev** is a fast and easy to use configuration management library for python.
+It offers an abstraction for your application configuration, with an efficient and clean implementation.
 
+## Features and benefits
+Using **Configs-dev** would allow you to manage all configurations in your application with ease and without the need to make any DB queries.
 
-Travis checkup
+_**<ins>Features:</ins>**_
+1. Define configuration hierarchy either from a YAML file or code
+2. Safely adding conflict-free new configurations
+3. Safely editing both configuration and hierarchies
+4. Fetching configurations and default values with ease
+
+## Documentation
+Click view the [**full documentation**](https://configs-dev.readthedocs.io/en/latest/)
+
+## Quick Start
+To begin using **Config-dev** you would need to define an hierarchy for your configurations.
+
+An hierarchy defines the structure of your configurations and what are the default values.
+_It may be seen as your business logic structure._
+
+For example sake I have a network of pizza places on different areas.
+
+ADD EXAMPLE HERE
+
+### Setting my configuration file
+`layers.yaml:`
+
+    app: pizzaplace             # name of the app
+    layers:                     # app layers set-up 
+      - name: area              # name of first layer
+        children:               # childs of first layer
+          - name: branch        # name of second layer
+            children:           
+              - name: pizza     # name of third layer
+              - name: oven      # name of another third layer
+
+In this example we have a top layer of area, which define there are several areas.
+Second layer is branch, that implicitly tells **Configs-dev** that areas contain several branches, and if a 
+configuration was not found for a specific branch it will ask the area for that configuration.
+Each branch has pizza configuration and oven configurations that would act the same and it can go on and on.
+No limits on the complexity of your application configuration.
+
+In general each layer have:
+* Unique name - _**Must**_
+* Child layers - _Optional_
+
+## Package maintainers
+This package is delivered with :heart: and maintained by AppCard inc.
+
+The use of is according to the LICENSE
+
