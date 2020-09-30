@@ -13,3 +13,7 @@ script:
 # add notifications to slack: #pre-open-source channel
 notifications:
   slack: appcard:X0eePYKUsQauXm1MksKI5WXU
+
+# add codecov reports
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
