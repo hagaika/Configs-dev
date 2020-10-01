@@ -36,6 +36,10 @@ class Structure:
         self.__file = None
         self.__global_layer = None
 
+    @property
+    def layers(self):
+        return self.__global_layer
+
     def structure_from_file(self, absolute_file_path: str):
         self.__file_exist(absolute_file_path)
         try:
@@ -85,3 +89,14 @@ class Structure:
             if 'children' in layer:
                 assert _seq_but_not_str(layer['children'])
                 cls.__validate_layer_children(layer['children'], name_memo)
+
+    def flatten_layers(self) -> list:
+        """
+        method to flatten the structure as if searched with BFS
+
+        :return: list of flatten nodes by layers
+        """
+        if self.layers:
+            from anytree import LevelOrderIter
+            return [node for node in LevelOrderIter(self.layers)]
+        raise Exception('No structure defined')
