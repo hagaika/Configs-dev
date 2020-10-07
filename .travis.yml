@@ -2,13 +2,36 @@ language: python
 python:
   - "3.7"
 
-# command to install dependencies
-install:
-  - pip install -r requirements.txt
+# setting up stages for CI
+stages:
+  - Quality
+  - Test
 
-# command to run tests
-script:
-  - pytest
+# cache definitions
+cache:
+  pip: true
+  directories:
+    - "$HOME/.cache/pre-commit"
+
+
+# jobs definitions for each stage
+jobs:
+  include:
+    - stage: Quality
+      install:
+        - pip install pre-commit
+        - pre-commit install-hooks
+      script:
+        - pre-commit run --all-files
+
+    - stage: Test
+      install:
+        - pip install --upgrade pip
+        - pip install poetry
+        - poetry install -v
+      script:
+        - pytest
+
   
 # add notifications to slack: #pre-open-source channel
 notifications:
