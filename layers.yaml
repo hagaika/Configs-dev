@@ -1,0 +1,18 @@
+# This is Layers configuration file
+# Layers hierarchy will be managed here
+#
+#
+
+app: my app
+
+layers:
+  - name: first_a_layer
+    children:
+      - name: second_a_layer
+        children:
+          - name: third_layer
+          - name: third_a_layer
+
+      - name: second_b_layer
+
+  - name: first_b_layer

@@ -7,6 +7,8 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
+anytree = "^2.8.0"
+strictyaml = "^1.1.0"
 
 [tool.poetry.dev-dependencies]
 Sphinx = "^3.2.1"
@@ -21,7 +23,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
 profile = "black"
-force_single_line = true
 atomic = true
 include_trailing_comma = true
 lines_after_imports = 2
