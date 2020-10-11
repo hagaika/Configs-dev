@@ -1,5 +1,7 @@
 import pytest
-from configs.models.Wallet import Wallet, InsufficientAmount
+
+from configs.models.Wallet import InsufficientAmount
+from configs.models.Wallet import Wallet
 
 
 def test_default_initial_amount():
