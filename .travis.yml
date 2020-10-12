@@ -25,13 +25,15 @@ jobs:
         - pre-commit run --all-files
 
     - stage: Test
-      install:
+      before_install:
         - pip install --upgrade pip
         - pip install poetry
+      #  - poetry config virtualenvs.create false
+      install:
         - poetry install -v
         - poetry add codecov
       script:
-        - pytest
+        - poetry run pytest --cov=configs tests/
 
   
 # add notifications to slack: #pre-open-source channel
