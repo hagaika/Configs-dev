@@ -1,0 +1,45 @@
+name: Python package
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  
+  pull_request:
+    brnaches:
+      - main
+      - develop
+
+jobs:
+
+  quality_check_job:
+    name: Quality
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8, 3.9]
+      
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install poetry
+      run: |
+        pip install poetry
+        poetry run pip install --upgrade pip
+    - name: Install project
+      run: |
+        poetry install
+    - name: Run quality pre-commit checks
+      run: |
+        poetry run pre-commit run --all-files
+    - name: Test with pytest
+      run: |
+        poetry run pytest --cov=configs tests/
+      
+        
+  
