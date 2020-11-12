@@ -15,10 +15,14 @@ jobs:
 
   quality_check_job:
     name: Quality
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-latest]
         python-version: [3.7, 3.8, 3.9]
+    env:
+      OS: ${{ matrix.os }}
+      PYTHON: ${{ matrix.python-version }}
       
     steps:
     - name: Check out repository
@@ -39,7 +43,15 @@ jobs:
         poetry run pre-commit run --all-files
     - name: Test with pytest
       run: |
-        poetry run pytest --cov=configs tests/
-      
+        poetry run pytest --cov=configs --cov-report=xml tests/
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        file: ./coverage.xml
+        directory: ./coverage/reports/
+        flags: unittests
+        env_vars: OS,PYTHON
+        name: codecov-umbrella
+        verbose: true
         
   
